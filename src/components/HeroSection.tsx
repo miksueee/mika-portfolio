@@ -83,7 +83,7 @@ const HeroSection = () => {
           <div className="glass rounded-3xl p-8 md:p-12 lg:p-16">
             {/* Tagline */}
             <p className="reveal opacity-0 text-primary font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-6">
-              Graphic Designer & Visual Artist
+              Graphic Designer & Visual Communicator
             </p>
 
             {/* Main Heading */}
