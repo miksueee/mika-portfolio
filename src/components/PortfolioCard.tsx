@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
 
 interface PortfolioItem {
@@ -73,11 +74,11 @@ const PortfolioCard = ({ item, index }: PortfolioCardProps) => {
     </>
   );
 
-  // If link exists, wrap with anchor tag
+  // If link exists, wrap with React Router Link
   if (item.link) {
     return (
-      <a
-        href={item.link}
+      <Link
+        to={item.link}
         target="_blank"
         rel="noopener noreferrer"
         className="group relative overflow-hidden rounded-2xl glass cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:shadow-[var(--shadow-lg)] block"
@@ -86,7 +87,7 @@ const PortfolioCard = ({ item, index }: PortfolioCardProps) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         {cardContent}
-      </a>
+      </Link>
     );
   }
 

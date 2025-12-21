@@ -78,6 +78,7 @@ const projectData: ProjectData = {
 };
 
 const BrandingProjectDetails = () => {
+  
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxMedia, setLightboxMedia] = useState<MediaItem | null>(null);
   const [darkMode, setDarkMode] = useState(false);

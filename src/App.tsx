@@ -11,6 +11,7 @@ import Photography from "./components/project/MobilePhotographyProjectDetails";
 import WebDesign from "./components/project/WebDesignProjectDetails";
 import VideoReel from "./components/project/VideoProjectDetails";
 import MarketingAssets from "./components/project/MarketingAssetsProjectDetails";
+import ScrollToTop from "./components/ui/scroll-top";
 
 const queryClient = new QueryClient();
 
