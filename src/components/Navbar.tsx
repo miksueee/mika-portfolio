@@ -64,7 +64,7 @@ const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
             }}
             className="glass-nav rounded-full px-5 py-2.5 font-serif text-xl md:text-2xl font-semibold text-foreground tracking-tight hover:scale-105 transition-transform duration-300"
           >
-            Studio<span className="text-primary">.</span>
+            Miks<span className="text-primary">.</span>
           </a>
 
           {/* Desktop Navigation - Glassmorphic Pill */}

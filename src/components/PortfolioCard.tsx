@@ -8,6 +8,7 @@ interface PortfolioItem {
   categoryLabel: string;
   image: string;
   description: string;
+  link?: string;
 }
 
 interface PortfolioCardProps {
@@ -18,13 +19,8 @@ interface PortfolioCardProps {
 const PortfolioCard = ({ item, index }: PortfolioCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  return (
-    <div
-      className="group relative overflow-hidden rounded-2xl glass cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:shadow-[var(--shadow-lg)]"
-      style={{ animationDelay: `${index * 100}ms` }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+  const cardContent = (
+    <>
       {/* Image */}
       <div className="aspect-[4/5] overflow-hidden rounded-xl m-2">
         <img
@@ -74,6 +70,35 @@ const PortfolioCard = ({ item, index }: PortfolioCardProps) => {
           {item.categoryLabel}
         </span>
       </div>
+    </>
+  );
+
+  // If link exists, wrap with anchor tag
+  if (item.link) {
+    return (
+      <a
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative overflow-hidden rounded-2xl glass cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:shadow-[var(--shadow-lg)] block"
+        style={{ animationDelay: `${index * 100}ms` }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {cardContent}
+      </a>
+    );
+  }
+
+  // Otherwise return just the card without link
+  return (
+    <div
+      className="group relative overflow-hidden rounded-2xl glass cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:shadow-[var(--shadow-lg)]"
+      style={{ animationDelay: `${index * 100}ms` }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {cardContent}
     </div>
   );
 };

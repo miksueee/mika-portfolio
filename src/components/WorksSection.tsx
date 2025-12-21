@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import PortfolioCard from "./PortfolioCard";
+import BrandingThumbnail from "../assets/branding-thumbnail.jpg";
+import SocialThumbnail from "../assets/social-thumbnail.jpg";
 
-type Category = "all" | "social" | "web" | "video" | "branding";
+type Category = "all" | "photography" | "web" | "video" | "branding" | "social" | "marketing";
 
 interface PortfolioItem {
   id: number;
@@ -11,81 +13,75 @@ interface PortfolioItem {
   categoryLabel: string;
   image: string;
   description: string;
+  link?: string;
 }
 
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "Nature's Essence Brand",
+    title: "Brand Identity Design",
     category: "branding",
     categoryLabel: "Branding",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1364&auto=format&fit=crop",
+    image: BrandingThumbnail,
     description: "Complete brand identity for an organic skincare line",
+    link: '/projects/branding'
   },
   {
     id: 2,
-    title: "Coffee Culture Campaign",
+    title: "Social Media Campaign",
     category: "social",
-    categoryLabel: "Social Media",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1374&auto=format&fit=crop",
-    description: "Instagram campaign for artisan coffee brand",
+    categoryLabel: "Social Media Visuals",
+    image: SocialThumbnail,
+    description: "Social media assets for a product launch",
+    link: '/projects/social-media'
   },
   {
     id: 3,
-    title: "Fintech App Redesign",
-    category: "web",
-    categoryLabel: "Web/UI Design",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop",
-    description: "Modern UI/UX design for mobile banking app",
+    title: "Mobile Photography",
+    category: "photography",
+    categoryLabel: "Mobile Photography",
+    image: SocialThumbnail,
+    description: "mobile photography project for lifestyle blog",
+    link: '/projects/photography'
   },
   {
     id: 4,
-    title: "Summer Collection Launch",
-    category: "video",
-    categoryLabel: "Short Vids/Reels",
-    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1470&auto=format&fit=crop",
-    description: "Motion graphics for fashion brand launch",
+    title: "Web Design/UI",
+    category: "web",
+    categoryLabel: "Web Design/UI",
+    image: SocialThumbnail,
+    description: "Web Design for a tech startup",
+    link: '/projects/web-design'
   },
   {
     id: 5,
-    title: "Wellness Studio Identity",
-    category: "branding",
-    categoryLabel: "Branding",
-    image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?q=80&w=1470&auto=format&fit=crop",
-    description: "Minimalist branding for yoga studio",
+    title: "Short Video Reel",
+    category: "video",
+    categoryLabel: "Short Vids/Reels",
+    image: SocialThumbnail,
+    description: "Short promotional video for social media",
+    link: '/projects/video-reel'
   },
   {
     id: 6,
-    title: "Tech Startup Social Kit",
-    category: "social",
-    categoryLabel: "Social Media",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop",
-    description: "Social media templates and graphics package",
-  },
-  {
-    id: 7,
-    title: "E-commerce Platform",
-    category: "web",
-    categoryLabel: "Web/UI Design",
-    image: "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?q=80&w=1470&auto=format&fit=crop",
-    description: "Complete e-commerce website design",
-  },
-  {
-    id: 8,
-    title: "Product Showcase Reel",
-    category: "video",
-    categoryLabel: "Short Vids/Reels",
-    image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1400&auto=format&fit=crop",
-    description: "Dynamic product reveal animation",
-  },
+    title: "marketing Asset Design",
+    category: "marketing",
+    categoryLabel: "Marketing Assets",
+    image: SocialThumbnail,
+    description: "Marketing materials for a seasonal campaign",
+    link: '/projects/marketing-assets'
+  }
+
 ];
 
 const categories: { key: Category; label: string }[] = [
   { key: "all", label: "All Works" },
-  { key: "social", label: "Social Media Visuals" },
+  { key: "photography", label: "Mobile Photography" },
   { key: "web", label: "Web Design/UI" },
+  { key: "social", label: "Social Media Visuals" },
   { key: "video", label: "Short Vids/Reels" },
   { key: "branding", label: "Branding" },
+  { key: "marketing", label: "Marketing Assets" },
 ];
 
 const WorksSection = () => {
@@ -167,7 +163,7 @@ const WorksSection = () => {
 
         {/* Portfolio Grid */}
         <div
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 transition-all duration-300 ${
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 transition-all duration-300 ${
             isAnimating ? "opacity-0 scale-95" : "opacity-100 scale-100"
           }`}
         >

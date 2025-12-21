@@ -1,9 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState} from "react";
 import { Button } from "./ui/button";
 import { ArrowDown, Sparkles, Palette, PenTool } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
+  const [isInitialState, setIsInitialState] = useState(true);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -100,19 +101,26 @@ const HeroSection = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="reveal opacity-0 stagger-3 flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button variant="hero" size="xl" onClick={scrollToWorks}>
-                View My Work
-              </Button>
-              <Button 
-                variant="outline" 
-                size="xl" 
-                onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
-                className="backdrop-blur-sm"
-              >
-                About Me
-              </Button>
-            </div>
+    <div 
+  className="reveal opacity-0 stagger-3 flex flex-col sm:flex-row gap-4 justify-center items-center"
+  onMouseEnter={() => setIsInitialState(false)}
+>
+  <Button 
+    variant="outline" 
+    size="xl" 
+    onClick={scrollToWorks}
+    className={isInitialState ? "bg-[#c67953] text-white border-[#c67953]" : ""}
+  >
+    View My Work
+  </Button>
+  <Button 
+    variant="outline" 
+    size="xl" 
+    onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
+  >
+    About Me
+  </Button>
+</div>
           </div>
         </div>
 

@@ -23,12 +23,11 @@ const AboutSection = () => {
   }, []);
 
   const skills = [
-    "Brand Identity",
-    "UI/UX Design",
-    "Social Media Graphics",
-    "Motion Design",
-    "Print Design",
-    "Visual Strategy",
+    "Image & Video Editing",
+    "Digital Media & Web Graphics",
+    "Social Media Asset Creation",
+    "Visual Content Creation",
+    "UI Design & Simple Prototyping",
   ];
 
   return (
@@ -65,7 +64,7 @@ const AboutSection = () => {
                 <Sparkles className="w-6 h-6 text-primary" />
               </div>
               <div className="absolute -bottom-6 -left-6 glass rounded-xl px-6 py-4 hidden md:block">
-                <p className="font-serif text-2xl text-primary font-semibold">5+</p>
+                <p className="font-serif text-2xl text-primary font-semibold">3+</p>
                 <p className="font-sans text-xs text-muted-foreground">Years Exp.</p>
               </div>
             </div>
@@ -85,7 +84,7 @@ const AboutSection = () => {
 
             <div className="reveal opacity-0 stagger-2 space-y-6 text-muted-foreground font-sans leading-relaxed">
               <p>
-                With over 5 years of experience in graphic design, I specialize in creating 
+                With over 3 years of experience in graphic design, I specialize in creating 
                 visual identities that resonate with audiences and drive meaningful engagement.
               </p>
               <p>
@@ -115,8 +114,8 @@ const AboutSection = () => {
             <div className="reveal opacity-0 stagger-4 mt-12 grid grid-cols-3 gap-4">
               {[
                 { number: "50+", label: "Projects" },
-                { number: "30+", label: "Clients" },
-                { number: "5+", label: "Years" },
+                { number: "6+", label: "Design Tools" },
+                { number: "3+", label: "Years" },
               ].map((stat) => (
                 <div key={stat.label} className="glass rounded-xl p-4 text-center hover:scale-105 transition-transform duration-300">
                   <span className="font-serif text-2xl md:text-3xl text-primary font-semibold block">
