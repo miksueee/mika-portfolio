@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import PortfolioCard from "./PortfolioCard";
 import BrandingThumbnail from "../assets/branding-thumbnail.jpg";
 import SocialThumbnail from "../assets/social-thumbnail.jpg";
+import PhotographyThumbnail from "../assets/photography/photography-thumbnail.jpg";
 
 type Category = "all" | "photography" | "web" | "video" | "branding" | "social" | "marketing";
 
@@ -40,7 +41,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Mobile Photography",
     category: "photography",
     categoryLabel: "Mobile Photography",
-    image: SocialThumbnail,
+    image: PhotographyThumbnail,
     description: "mobile photography project for lifestyle blog",
     link: '/projects/photography'
   },
