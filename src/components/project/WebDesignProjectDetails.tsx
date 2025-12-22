@@ -3,6 +3,12 @@ import { X, ArrowLeft, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Background from "../../assets/page-1.png";
 import Img1 from "../../assets/webdesign/img-1.png";
+import web from "../../assets/webdesign/web-thumbnail.png";
+import web1 from "../../assets/webdesign/qstd.png";
+import web2 from "../../assets/webdesign/solar.png";
+import web3 from "../../assets/webdesign/solar1.png";
+import web4 from "../../assets/webdesign/moodle.png";
+import web5 from "../../assets/webdesign/moodle1.png";
 
 type MediaType = "image" | "gif" | "video";
 type Orientation = "portrait" | "square" | "landscape" | "wide" | "tall" | "horizontal";
@@ -35,44 +41,44 @@ const projectData: ProjectData = {
     {
       id: 1,
       type: "image",
-      url: Img1,
-      orientation: "horizontal",
-      caption: "Tote bag design mockup",
+      url: web,
+      orientation: "landscape",
+      caption: "Sample Mobile UI Design",
     },
     {
       id: 2,
       type: "image",
-      url: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1364&auto=format&fit=crop",
-      orientation: "portrait",
-      caption: "Product packaging design",
+      url: web1,
+      orientation: "landscape",
+      caption: "Sample Mobile UI Design",
     },
     {
       id: 3,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?q=80&w=1364&auto=format&fit=crop",
-      orientation: "square",
-      caption: "Brand color palette exploration",
+     type: "image",
+      url: web2,
+      orientation: "landscape",
+      caption: "Sample Mobile UI Design",
     },
     {
       id: 4,
-      type: "video",
-      url: "https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&muted=1",
+       type: "image",
+      url: web3,
       orientation: "landscape",
-      caption: "Brand motion graphics",
+      caption: "Sample Mobile UI Design",
     },
     {
       id: 5,
       type: "image",
-      url: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1364&auto=format&fit=crop",
+      url: web4,
       orientation: "landscape",
-      caption: "Marketing collateral",
+      caption: "Sample Mobile UI Design",
     },
     {
       id: 6,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1364&auto=format&fit=crop",
-      orientation: "portrait",
-      caption: "Product photography",
+     type: "image",
+      url: web5,
+      orientation: "landscape",
+      caption: "Sample Mobile UI Design",
     },
   ],
 };

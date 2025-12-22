@@ -3,6 +3,10 @@ import { X, ArrowLeft, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Background from "../../assets/page-1.png";
 import Img1 from "../../assets/video/img-1.png";
+import reel from "../../assets/video/reel.mp4";
+import reel1 from "../../assets/video/reel1.mp4";
+import reel2 from "../../assets/video/reel2.mp4";
+import reel3 from "../../assets/video/reel3.mp4";
 
 type MediaType = "image" | "gif" | "video";
 type Orientation = "portrait" | "square" | "landscape" | "wide" | "tall" | "horizontal";
@@ -34,46 +38,32 @@ const projectData: ProjectData = {
   media: [
     {
       id: 1,
-      type: "image",
-      url: Img1,
-      orientation: "horizontal",
-      caption: "Tote bag design mockup",
+      type: "video",
+      url: reel,
+      orientation: "portrait",
+      caption: "Sample reel"
     },
     {
       id: 2,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1364&auto=format&fit=crop",
-      orientation: "portrait",
-      caption: "Product packaging design",
+       type: "video",
+      url: reel1,
+        orientation: "portrait",
+      caption: "Sample reel"
     },
     {
       id: 3,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?q=80&w=1364&auto=format&fit=crop",
-      orientation: "square",
-      caption: "Brand color palette exploration",
+    type: "video",
+      url: reel2,
+    orientation: "portrait",
+      caption: "Sample reel"
     },
-    {
+      {
       id: 4,
-      type: "video",
-      url: "https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&muted=1",
-      orientation: "landscape",
-      caption: "Brand motion graphics",
-    },
-    {
-      id: 5,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1364&auto=format&fit=crop",
-      orientation: "landscape",
-      caption: "Marketing collateral",
-    },
-    {
-      id: 6,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1364&auto=format&fit=crop",
-      orientation: "portrait",
-      caption: "Product photography",
-    },
+    type: "video",
+      url: reel3,
+    orientation: "portrait",
+      caption: "Sample reel"
+    }
   ],
 };
 

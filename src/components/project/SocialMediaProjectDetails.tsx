@@ -2,7 +2,42 @@ import { useState, useEffect } from "react";
 import { X, ArrowLeft, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Background from "../../assets/page-1.png";
-import Img1 from "../../assets/socialmedia/img-1.png";
+import skin from "../../assets/socialmedia/skincare.jpg";
+import skin1 from "../../assets/socialmedia/skincare1.jpg";
+import skin2 from "../../assets/socialmedia/skincare2.jpg";
+import skin3 from "../../assets/socialmedia/skincareaura.jpg";
+import skinvid from "../../assets/socialmedia/vidskin.mp4";
+import food from "../../assets/socialmedia/food.jpg";
+import food1 from "../../assets/socialmedia/food2.jpg";
+import food2 from "../../assets/socialmedia/food3.jpg";
+import food3 from "../../assets/socialmedia/food4.jpg";
+import food4 from "../../assets/socialmedia/food5.jpg";
+import food5 from "../../assets/socialmedia/food6.jpg";
+import paper from "../../assets/socialmedia/sirio.jpg";
+import paper1 from "../../assets/socialmedia/paper.jpg";
+import paper2 from "../../assets/socialmedia/paper2.jpg";
+import paper3 from "../../assets/socialmedia/paper3.jpg";
+import paper4 from "../../assets/socialmedia/paper4.jpg";
+import paper5 from "../../assets/socialmedia/paper1.jpg";
+import paper6 from "../../assets/socialmedia/paper5.jpg";
+import paper7 from "../../assets/socialmedia/paper6.jpg";
+import paper8 from "../../assets/socialmedia/paper7.jpg";
+import paper9 from "../../assets/socialmedia/paper8.jpg";
+import paper10 from "../../assets/socialmedia/paper9.jpg";
+import paper11 from "../../assets/socialmedia/paper10.jpg";
+import fedri from "../../assets/socialmedia/fedri.jpg";
+import fedri1 from "../../assets/socialmedia/fedri1.jpg";
+import green from "../../assets/socialmedia/gogreen.jpg";
+import green1 from "../../assets/socialmedia/gogreen1.jpg";
+import green2 from "../../assets/socialmedia/gogreen2.jpg";
+import green3 from "../../assets/socialmedia/gogreen3.jpg";
+import green4 from "../../assets/socialmedia/gogreenrock.jpg";
+import solar from "../../assets/socialmedia/solar.png";
+import solar1 from "../../assets/socialmedia/solar1.png";
+import solar2 from "../../assets/socialmedia/solarprod.png";
+import solar3 from "../../assets/socialmedia/solarprod1.jpg";
+
+
 
 type MediaType = "image" | "gif" | "video";
 type Orientation = "portrait" | "square" | "landscape" | "wide" | "tall" | "horizontal";
@@ -26,54 +61,264 @@ interface ProjectData {
 }
 
 const projectData: ProjectData = {
-  title: "Social Media Campaign",
-  category: "Social Media",
-  description: "Social media assets created for a product launch campaign, including promotional graphics, short videos, and story templates designed to engage the target audience and boost brand visibility across multiple platforms.",
-  tags: ["Branding", "Photoshop", "Photography", "Packaging"],
+  title: "Marketing Assets Design",
+  category: "Marketing Assets",
+  description: "Marketing assets design project for a tech startup, featuring a modern, responsive website with interactive elements and a clean aesthetic.",
+  tags: ["Marketing Assets", "UI/UX", "Responsive Design", "Frontend Development"],
   backgroundImage: Background, 
   media: [
     {
       id: 1,
       type: "image",
-      url: Img1,
-      orientation: "horizontal",
-      caption: "Tote bag design mockup",
+      url: skin,
+      orientation: "square",
+      caption: "Skincare product",
     },
     {
       id: 2,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1364&auto=format&fit=crop",
-      orientation: "portrait",
-      caption: "Product packaging design",
+       type: "image",
+      url: skin1,
+      orientation: "square",
+      caption: "Skincare product",
     },
     {
       id: 3,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?q=80&w=1364&auto=format&fit=crop",
+        type: "image",
+      url: skin2,
       orientation: "square",
-      caption: "Brand color palette exploration",
+      caption: "Skincare product",
     },
     {
       id: 4,
       type: "video",
-      url: "https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&muted=1",
-      orientation: "landscape",
-      caption: "Brand motion graphics",
+      url: skinvid,
+      orientation: "portrait",
+      caption: "Simple skincare vid",
     },
     {
       id: 5,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1364&auto=format&fit=crop",
-      orientation: "landscape",
-      caption: "Marketing collateral",
+       type: "image",
+      url: skin3,
+      orientation: "square",
+      caption: "Skincare product",
     },
     {
       id: 6,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1364&auto=format&fit=crop",
-      orientation: "portrait",
-      caption: "Product photography",
+       type: "image",
+      url: food,
+      orientation: "square",
+      caption: "Skincare product",
     },
+      {
+      id: 7,
+       type: "image",
+      url: food2,
+      orientation: "square",
+      caption: "Skincare product",
+    },
+      {
+      id: 8,
+       type: "image",
+      url: food3,
+      orientation: "square",
+      caption: "Skincare product",
+    },
+
+      {
+      id: 9,
+       type: "image",
+      url: food4,
+      orientation: "square",
+      caption: "Skincare product",
+    },
+
+     {
+      id: 10,
+       type: "image",
+      url: food5,
+      orientation: "square",
+      caption: "Skincare product",
+    },
+
+    {
+      id: 11,
+       type: "image",
+      url: food1,
+      orientation: "square",
+      caption: "Skincare product",
+    },
+
+    {
+      id: 12,
+       type: "image",
+      url: paper,
+      orientation: "landscape",
+      caption: "Paper product",
+    },
+
+    {
+      id: 13,
+       type: "image",
+      url: paper1,
+      orientation: "square",
+      caption: "Paper product",
+    },
+
+      {
+      id: 14,
+       type: "image",
+      url: paper2,
+      orientation: "square",
+      caption: "Paper product",
+    },
+
+       {
+      id: 15,
+       type: "image",
+      url: paper3,
+      orientation: "square",
+      caption: "Paper product",
+    },
+
+      {
+      id: 16,
+       type: "image",
+      url: paper4,
+      orientation: "square",
+      caption: "Paper product",
+    },
+
+     {
+      id: 17,
+       type: "image",
+      url: paper5,
+      orientation: "portrait",
+      caption: "Paper product",
+    },
+
+      {
+      id: 18,
+       type: "image",
+      url: paper6,
+      orientation: "square",
+      caption: "Paper product",
+    },
+      {
+      id: 19,
+       type: "image",
+      url: paper7,
+      orientation: "square",
+      caption: "Paper product",
+    },
+
+      {
+      id: 20,
+       type: "image",
+      url: paper8,
+      orientation: "square",
+      caption: "Paper product",
+    },
+
+    {
+      id: 21,
+       type: "image",
+      url: paper9,
+      orientation: "square",
+      caption: "Paper product",
+    },
+
+     {
+      id: 22,
+       type: "image",
+      url: paper10,
+      orientation: "square",
+      caption: "Paper product",
+    },
+
+    {
+      id: 23,
+       type: "image",
+      url: paper11,
+      orientation: "square",
+      caption: "Paper product",
+    },
+     {
+      id: 24,
+       type: "image",
+      url: fedri,
+      orientation: "landscape",
+      caption: "Paper product",
+    },
+    {
+      id: 25,
+       type: "image",
+      url: green1,
+      orientation: "square",
+      caption: "Paper product",
+    },
+    {
+      id: 26,
+       type: "image",
+      url: green2,
+      orientation: "square",
+      caption: "Paper product",
+    },
+    {
+      id: 28,
+       type: "image",
+      url: green4,
+      orientation: "square",
+      caption: "Paper product",
+    },
+     {
+      id: 29,
+       type: "image",
+      url: green,
+      orientation: "square",
+      caption: "Paper product",
+    },
+     {
+      id: 30,
+       type: "image",
+      url: green3,
+      orientation: "square",
+      caption: "Paper product",
+    },
+     {
+      id: 31,
+       type: "image",
+      url: fedri1,
+      orientation: "landscape",
+      caption: "Paper product",
+    },
+    {
+      id: 32,
+       type: "image",
+      url: solar,
+      orientation: "landscape",
+      caption: "Paper product",
+    },
+    {
+      id: 33,
+       type: "image",
+      url: solar1,
+      orientation: "landscape",
+      caption: "Paper product",
+    },
+    {
+      id: 34,
+       type: "image",
+      url: solar2,
+      orientation: "square",
+      caption: "Paper product",
+    },
+    {
+      id: 35,
+       type: "image",
+      url: solar3,
+      orientation: "square",
+      caption: "Paper product",
+    }
   ],
 };
 

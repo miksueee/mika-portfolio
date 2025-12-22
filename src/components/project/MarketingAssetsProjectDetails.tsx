@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import { X, ArrowLeft, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Background from "../../assets/page-1.png";
-import Img1 from "../../assets/marketing/img-1.png";
+import skin from "../../assets/marketing/skincare.jpg";
+import skin1 from "../../assets/marketing/skincare1.jpg";
+import skin2 from "../../assets/marketing/skincare2.jpg";
+import skin3 from "../../assets/marketing/skincareaura.jpg";
+import skinvid from "../../assets/marketing/vidskin.mp4";
 
 type MediaType = "image" | "gif" | "video";
 type Orientation = "portrait" | "square" | "landscape" | "wide" | "tall" | "horizontal";
@@ -35,37 +39,37 @@ const projectData: ProjectData = {
     {
       id: 1,
       type: "image",
-      url: Img1,
-      orientation: "horizontal",
-      caption: "Tote bag design mockup",
+      url: skin,
+      orientation: "square",
+      caption: "Skincare product",
     },
     {
       id: 2,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1364&auto=format&fit=crop",
-      orientation: "portrait",
-      caption: "Product packaging design",
+       type: "image",
+      url: skin1,
+      orientation: "square",
+      caption: "Skincare product",
     },
     {
       id: 3,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?q=80&w=1364&auto=format&fit=crop",
+        type: "image",
+      url: skin2,
       orientation: "square",
-      caption: "Brand color palette exploration",
+      caption: "Skincare product",
     },
     {
       id: 4,
       type: "video",
-      url: "https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&muted=1",
-      orientation: "landscape",
-      caption: "Brand motion graphics",
+      url: skinvid,
+      orientation: "square",
+      caption: "Simple skincare vid",
     },
     {
       id: 5,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1364&auto=format&fit=crop",
-      orientation: "landscape",
-      caption: "Marketing collateral",
+       type: "image",
+      url: skin3,
+      orientation: "square",
+      caption: "Skincare product",
     },
     {
       id: 6,
@@ -73,7 +77,7 @@ const projectData: ProjectData = {
       url: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1364&auto=format&fit=crop",
       orientation: "portrait",
       caption: "Product photography",
-    },
+    }
   ],
 };
 

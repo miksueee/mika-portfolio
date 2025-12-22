@@ -2,7 +2,20 @@ import { useState, useEffect } from "react";
 import { X, ArrowLeft, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Background from "../../assets/page-1.png";
-import Img1 from "../../assets/branding/img-1.png";
+import branding from "../../assets/branding/branding.jpg";
+import booklet from "../../assets/branding/booklet.jpg";
+import bookletvid from "../../assets/branding/booklet.mp4";
+import brochure from "../../assets/branding/brochure1.jpg";
+import brochure1 from "../../assets/branding/brochure2.jpg";
+import brochure2 from "../../assets/branding/brochure3.jpg";
+import pullup from "../../assets/branding/pullup.jpg";
+import poster from "../../assets/branding/poster.jpg";
+import poster1 from "../../assets/branding/poster1.jpg";
+import totebag from "../../assets/branding/totebag.png";
+import totebag1 from "../../assets/branding/totebag1.jpg";
+import notebook from "../../assets/branding/notebook.jpg";
+
+
 
 type MediaType = "image" | "gif" | "video";
 type Orientation = "portrait" | "square" | "landscape" | "wide" | "tall" | "horizontal";
@@ -26,53 +39,98 @@ interface ProjectData {
 }
 
 const projectData: ProjectData = {
-  title: "Nature's Essence Brand",
+  title: "Branding Guideline",
   category: "Branding & Visual Identity",
-  description: "Complete brand identity for an organic skincare line featuring custom photography, packaging design, and marketing materials.",
+  description: "Complete brand identity for solar energy solutions company, including branding assets, color palette, typography, and marketing collateral.",
   tags: ["Branding", "Photoshop", "Photography", "Packaging"],
   backgroundImage: Background, 
   media: [
     {
       id: 1,
       type: "image",
-      url: Img1,
+      url: branding,
       orientation: "horizontal",
-      caption: "Tote bag design mockup",
+      caption: "Branding Identity",
     },
     {
       id: 2,
       type: "image",
-      url: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1364&auto=format&fit=crop",
-      orientation: "portrait",
-      caption: "Product packaging design",
+      url: booklet,
+      orientation: "landscape",
+      caption: "Booklet Design",
     },
     {
       id: 3,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?q=80&w=1364&auto=format&fit=crop",
-      orientation: "square",
-      caption: "Brand color palette exploration",
+      type: "video",
+      url: bookletvid,
+      orientation: "horizontal",
+      caption: "Company Profile Booklet",
     },
     {
       id: 4,
-      type: "video",
-      url: "https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&muted=1",
+      type: "image",
+      url: brochure,
       orientation: "landscape",
-      caption: "Brand motion graphics",
+      caption: "Trifold Brochure Mockup",
     },
     {
       id: 5,
       type: "image",
-      url: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1364&auto=format&fit=crop",
+      url: brochure1,
       orientation: "landscape",
-      caption: "Marketing collateral",
+      caption: "Trifold Brochure Mockup",
     },
     {
       id: 6,
-      type: "image",
-      url: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1364&auto=format&fit=crop",
-      orientation: "portrait",
-      caption: "Product photography",
+     type: "image",
+      url: brochure2,
+      orientation: "landscape",
+      caption: "Trifold Brochure Mockup",
+    },
+     {
+      id: 6,
+     type: "image",
+      url: pullup,
+      orientation: "landscape",
+      caption: "Pull-up Banner Design",
+    },
+      {
+    id: 7,
+     type: "image",
+      url: poster,
+      orientation: "landscape",
+      caption: "Poster Design",
+    },
+
+        {
+    id: 8,
+     type: "image",
+      url: totebag,
+      orientation: "landscape",
+      caption: "Tote Bag Design",
+    },
+
+        {
+    id: 9,
+     type: "image",
+      url: poster1,
+      orientation: "landscape",
+      caption: "Tote Bag Design",
+    },
+
+         {
+    id: 10,
+     type: "image",
+      url: totebag1,
+      orientation: "landscape",
+      caption: "Tote Bag Design",
+    },
+             {
+    id: 11,
+     type: "image",
+      url: notebook,
+      orientation: "landscape",
+      caption: "Notebook Design",
     },
   ],
 };

@@ -3,6 +3,16 @@ import { X, ArrowLeft, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Background from "../../assets/page-1.png";
 import Img1 from "../../assets/photography/img-1.png";
+import Img2 from "../../assets/photography/mobile1.jpg";
+import Img3 from "../../assets/photography/mobile2.jpg";
+import Img4 from "../../assets/photography/mobile3.jpg";
+import Img5 from "../../assets/photography/mobile4.jpg";
+import Img6 from "../../assets/photography/mobile5.jpg";
+import Img7 from "../../assets/photography/mobile6.jpg";
+import Img8 from "../../assets/photography/mobile7.jpg";
+import Img9 from "../../assets/photography/mobile8.jpg";
+import Img10 from "../../assets/photography/mobile9.jpg";
+
 
 type MediaType = "image" | "gif" | "video";
 type Orientation = "portrait" | "square" | "landscape" | "wide" | "tall" | "horizontal";
@@ -26,54 +36,75 @@ interface ProjectData {
 }
 
 const projectData: ProjectData = {
-  title: "Photography for Lifestyle Blog",
+  title: "Photography for Fun",
   category: "Mobile Photography",
-  description: "Mobile photography project for a lifestyle blog, featuring lifestyle shots and product photography.",
-  tags: ["Mobile Photography", "Lifestyle", "Product Photography"],
+  description: "his album is a collection of my favorite mobile shots, showcasing buildings, food, flowers, animals, and products. Each photo is a sample of the moments and subjects I enjoy capturing, all taken with my mobile and carefully edited to enhance their colors, details, and mood. From everyday scenes to creative product shots, this collection reflects my curiosity and passion for finding beauty in all kinds of things through the lens of my phone.",
+  tags: ["Mobile Photography", "Floral Shots", "Buildings", "Product Photography"],
   backgroundImage: Background, 
   media: [
     {
       id: 1,
       type: "image",
-      url: Img1,
-      orientation: "horizontal",
-      caption: "Tote bag design mockup",
+      url: Img2,
+      orientation: "portrait",
+      caption: "Night Photography with Mobile",
     },
     {
       id: 2,
       type: "image",
-      url: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1364&auto=format&fit=crop",
+      url: Img3,
       orientation: "portrait",
-      caption: "Product packaging design",
+      caption: "Mobile Photography",
     },
     {
       id: 3,
       type: "image",
-      url: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?q=80&w=1364&auto=format&fit=crop",
+      url: Img4,
       orientation: "square",
-      caption: "Brand color palette exploration",
+      caption: "Food Photography with Mobile",
     },
     {
       id: 4,
-      type: "video",
-      url: "https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&muted=1",
-      orientation: "landscape",
+      type: "image",
+      url: Img5,
+      orientation: "square",
       caption: "Brand motion graphics",
     },
     {
       id: 5,
       type: "image",
-      url: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1364&auto=format&fit=crop",
-      orientation: "landscape",
+      url: Img6,
+      orientation: "square",
       caption: "Marketing collateral",
     },
     {
       id: 6,
       type: "image",
-      url: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1364&auto=format&fit=crop",
+      url: Img8,
       orientation: "portrait",
       caption: "Product photography",
     },
+     {
+      id: 7,
+      type: "image",
+      url: Img7,
+      orientation: "square",
+      caption: "Product photography",
+    },
+     {
+      id: 8,
+      type: "image",
+      url: Img9,
+      orientation: "square",
+      caption: "Product photography",
+    },
+     {
+      id: 9,
+      type: "image",
+      url: Img10,
+      orientation: "square",
+      caption: "Product photography",
+    }
   ],
 };
 

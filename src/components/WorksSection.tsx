@@ -4,6 +4,9 @@ import PortfolioCard from "./PortfolioCard";
 import BrandingThumbnail from "../assets/branding-thumbnail.jpg";
 import SocialThumbnail from "../assets/social-thumbnail.jpg";
 import PhotographyThumbnail from "../assets/photography/photography-thumbnail.jpg";
+import WebThumbnail from "../assets/webdesign/web-thumbnail.png";
+import MktgThumbnail from "../assets/marketing/mktg-thumbnail.jpg";
+import VideoThumbnail from "../assets/video/video-thumbnail.png";
 
 type Category = "all" | "photography" | "web" | "video" | "branding" | "social" | "marketing";
 
@@ -29,11 +32,11 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 2,
-    title: "Social Media Campaign",
+    title: "Social Media Visuals",
     category: "social",
-    categoryLabel: "Social Media Visuals",
+    categoryLabel: "Visual Designs",
     image: SocialThumbnail,
-    description: "Social media assets for a product launch",
+    description: "Social media assets and visual designs for products",
     link: '/projects/social-media'
   },
   {
@@ -50,7 +53,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Web Design/UI",
     category: "web",
     categoryLabel: "Web Design/UI",
-    image: SocialThumbnail,
+    image: WebThumbnail,
     description: "Web Design for a tech startup",
     link: '/projects/web-design'
   },
@@ -59,16 +62,16 @@ const portfolioItems: PortfolioItem[] = [
     title: "Short Video Reel",
     category: "video",
     categoryLabel: "Short Vids/Reels",
-    image: SocialThumbnail,
+    image: VideoThumbnail,
     description: "Short promotional video for social media",
     link: '/projects/video-reel'
   },
   {
     id: 6,
-    title: "marketing Asset Design",
+    title: "Marketing Asset Design",
     category: "marketing",
     categoryLabel: "Marketing Assets",
-    image: SocialThumbnail,
+    image: MktgThumbnail,
     description: "Marketing materials for a seasonal campaign",
     link: '/projects/marketing-assets'
   }
