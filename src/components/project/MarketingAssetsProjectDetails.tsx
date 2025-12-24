@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import { X, ArrowLeft, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Background from "../../assets/page-1.png";
-import skin from "../../assets/marketing/skincare.jpg";
-import skin1 from "../../assets/marketing/skincare1.jpg";
-import skin2 from "../../assets/marketing/skincare2.jpg";
-import skin3 from "../../assets/marketing/skincareaura.jpg";
-import skinvid from "../../assets/marketing/vidskin.mp4";
+import pers from "../../assets/marketing/mobi.jpg";
+import pers1 from "../../assets/marketing/livestock.jpg";
+import pers2 from "../../assets/marketing/nbs.jpg";
+import pers3 from "../../assets/marketing/pbf.jpg";
+import pers4 from "../../assets/marketing/print.jpg";
+import pers5 from "../../assets/marketing/propak2024.jpg";
+import pers6 from "../../assets/marketing/propak2025.jpg";
+import pers7 from "../../assets/marketing/bloom.jpg";
 
 type MediaType = "image" | "gif" | "video";
 type Orientation = "portrait" | "square" | "landscape" | "wide" | "tall" | "horizontal";
@@ -30,7 +33,7 @@ interface ProjectData {
 }
 
 const projectData: ProjectData = {
-  title: "Marketing Assets Design",
+  title: "Booth Design Concepts",
   category: "Marketing Assets",
   description: "Marketing assets design project for a tech startup, featuring a modern, responsive website with interactive elements and a clean aesthetic.",
   tags: ["Marketing Assets", "UI/UX", "Responsive Design", "Frontend Development"],
@@ -39,44 +42,61 @@ const projectData: ProjectData = {
     {
       id: 1,
       type: "image",
-      url: skin,
-      orientation: "square",
-      caption: "Skincare product",
+      url: pers,
+      orientation: "landscape",
+      caption: "A blue and orange booth showcasing solar projects and renewable energy assets.",
     },
     {
       id: 2,
        type: "image",
-      url: skin1,
-      orientation: "square",
-      caption: "Skincare product",
+      url: pers1,
+      orientation:  "landscape",
+      caption: "A booth promoting sustainable paper solutions for a livestock-friendly world.t",
     },
     {
       id: 3,
         type: "image",
-      url: skin2,
-      orientation: "square",
-      caption: "Skincare product",
+      url: pers2,
+      orientation:  "landscape",
+      caption: "A display of the 7’s of circularity, highlighting reusable and refurbishable papers.t",
     },
     {
       id: 4,
-      type: "video",
-      url: skinvid,
-      orientation: "square",
-      caption: "Simple skincare vid",
+      type: "image",
+      url: pers3,
+      orientation: "landscape",
+      caption: "Illustrated and vector-style booth showing sustainable paper use for the Philippine Book Festival.",
     },
     {
       id: 5,
        type: "image",
-      url: skin3,
-      orientation: "square",
-      caption: "Skincare product",
+      url: pers4,
+      orientation:  "landscape",
+      caption: "A booth showcasing sustainable papers suitable for different types of printers.",
     },
     {
       id: 6,
       type: "image",
-      url: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1364&auto=format&fit=crop",
-      orientation: "portrait",
-      caption: "Product photography",
+      url: pers5,
+      orientation:  "landscape",
+      caption: "A launch booth for the 7s of circularity, emphasizing paper products that reduce carbon footprints.",
+    },
+
+    {
+      id: 7,
+      type: "image",
+      url: pers6,
+      orientation:  "landscape",
+      caption: "A modular booth presenting the 5s of sustainable packaging with various labels and box structures.",
+    },
+
+    
+    {
+      id: 8,
+      type: "image",
+      url: pers7,
+      orientation:  "landscape",
+      caption: "A creative booth highlighting sustainable paper products through floral-inspired designs.",
     }
   ],
 };

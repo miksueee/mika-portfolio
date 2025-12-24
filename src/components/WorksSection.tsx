@@ -5,7 +5,7 @@ import BrandingThumbnail from "../assets/branding-thumbnail.jpg";
 import SocialThumbnail from "../assets/social-thumbnail.jpg";
 import PhotographyThumbnail from "../assets/photography/photography-thumbnail.jpg";
 import WebThumbnail from "../assets/webdesign/web-thumbnail.png";
-import MktgThumbnail from "../assets/marketing/mktg-thumbnail.jpg";
+import MktgThumbnail from "../assets/marketing/mktg-thumbnail.png";
 import VideoThumbnail from "../assets/video/video-thumbnail.png";
 
 type Category = "all" | "photography" | "web" | "video" | "branding" | "social" | "marketing";
@@ -27,12 +27,12 @@ const portfolioItems: PortfolioItem[] = [
     category: "branding",
     categoryLabel: "Branding",
     image: BrandingThumbnail,
-    description: "Complete brand identity for an organic skincare line",
+    description: "Brand Identity project for a solar energy solutions company",
     link: '/projects/branding'
   },
   {
     id: 2,
-    title: "Social Media Visuals",
+    title: "Creative Social Graphics",
     category: "social",
     categoryLabel: "Visual Designs",
     image: SocialThumbnail,
@@ -45,7 +45,7 @@ const portfolioItems: PortfolioItem[] = [
     category: "photography",
     categoryLabel: "Mobile Photography",
     image: PhotographyThumbnail,
-    description: "mobile photography project for lifestyle blog",
+    description: "Mobile photography for everyday moments",
     link: '/projects/photography'
   },
   {
@@ -54,7 +54,7 @@ const portfolioItems: PortfolioItem[] = [
     category: "web",
     categoryLabel: "Web Design/UI",
     image: WebThumbnail,
-    description: "Web Design for a tech startup",
+    description: "Web Design samples",
     link: '/projects/web-design'
   },
   {
@@ -68,11 +68,11 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 6,
-    title: "Marketing Asset Design",
+    title: "Booth Design Concepts",
     category: "marketing",
-    categoryLabel: "Marketing Assets",
+    categoryLabel: "Booth Concepts",
     image: MktgThumbnail,
-    description: "Marketing materials for a seasonal campaign",
+    description: "Explorations of layout, branding, and visual presence for event spaces.",
     link: '/projects/marketing-assets'
   }
 
@@ -85,7 +85,7 @@ const categories: { key: Category; label: string }[] = [
   { key: "social", label: "Social Media Visuals" },
   { key: "video", label: "Short Vids/Reels" },
   { key: "branding", label: "Branding" },
-  { key: "marketing", label: "Marketing Assets" },
+  { key: "marketing", label: "Booth Concept" },
 ];
 
 const WorksSection = () => {

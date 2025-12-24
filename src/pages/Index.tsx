@@ -35,7 +35,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Studio | Graphic Design Portfolio</title>
+        <title>Miks | Graphic Design Portfolio</title>
         <meta
           name="description"
           content="Creative graphic designer specializing in branding, UI/UX design, social media visuals, and motion graphics. View my portfolio of visual storytelling."

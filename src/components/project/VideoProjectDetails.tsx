@@ -45,23 +45,23 @@ const projectData: ProjectData = {
     },
     {
       id: 2,
-       type: "video",
+      type: "video",
       url: reel1,
-        orientation: "portrait",
+      orientation: "portrait",
       caption: "Sample reel"
     },
     {
       id: 3,
-    type: "video",
+      type: "video",
       url: reel2,
-    orientation: "portrait",
+      orientation: "portrait",
       caption: "Sample reel"
     },
-      {
+    {
       id: 4,
-    type: "video",
+      type: "video",
       url: reel3,
-    orientation: "portrait",
+      orientation: "portrait",
       caption: "Sample reel"
     }
   ],
@@ -111,17 +111,17 @@ const VideoProjectDetails = () => {
   const getMediaClassName = (orientation: Orientation): string => {
     switch (orientation) {
       case "portrait":
-        return "md:col-span-1 md:row-span-2"; // 1 column, 2 rows tall
+        return "md:col-span-1 md:row-span-2";
       case "square":
-        return "md:col-span-1 md:row-span-1"; // 1 column, 1 row
+        return "md:col-span-1 md:row-span-1";
       case "landscape":
-        return "md:col-span-2 md:row-span-1"; // 2 columns wide, 1 row
+        return "md:col-span-2 md:row-span-1";
       case "wide":
-        return "md:col-span-3 md:row-span-1"; // 3 columns wide, 1 row
+        return "md:col-span-3 md:row-span-1";
       case "tall":
-        return "md:col-span-1 md:row-span-3"; // 1 column, 3 rows tall
+        return "md:col-span-1 md:row-span-3";
       case "horizontal":
-        return "md:col-span-2 md:row-span-2"; // 2 columns wide, 2 rows tall (1080px × 1350px ratio)
+        return "md:col-span-2 md:row-span-2";
       default:
         return "md:col-span-1 md:row-span-1";
     }
@@ -129,17 +129,19 @@ const VideoProjectDetails = () => {
 
   const renderMedia = (media: MediaItem, isLightbox: boolean = false) => {
     const className = isLightbox
-      ? "w-full h-full object-contain"
+      ? "w-full h-full object-cover"
       : "w-full h-full object-cover transition-transform duration-500 group-hover:scale-105";
 
     if (media.type === "video") {
       return (
-        <iframe
+        <video
           src={media.url}
           className={className}
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          title={media.alt || media.caption}
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls={isLightbox}
         />
       );
     }

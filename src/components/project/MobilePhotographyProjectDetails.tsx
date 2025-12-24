@@ -38,7 +38,7 @@ interface ProjectData {
 const projectData: ProjectData = {
   title: "Photography for Fun",
   category: "Mobile Photography",
-  description: "his album is a collection of my favorite mobile shots, showcasing buildings, food, flowers, animals, and products. Each photo is a sample of the moments and subjects I enjoy capturing, all taken with my mobile and carefully edited to enhance their colors, details, and mood. From everyday scenes to creative product shots, this collection reflects my curiosity and passion for finding beauty in all kinds of things through the lens of my phone.",
+  description: "Each photo is a sample of the moments and subjects I enjoy capturing, all taken with my mobile and carefully edited to enhance their colors, details, and mood. From everyday scenes to creative product shots, this collection reflects my curiosity and passion for finding beauty in all kinds of things through the lens of my phone.",
   tags: ["Mobile Photography", "Floral Shots", "Buildings", "Product Photography"],
   backgroundImage: Background, 
   media: [

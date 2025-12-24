@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Sparkles } from "lucide-react";
+import pic from "../assets/me.jpg";
+
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -24,10 +26,10 @@ const AboutSection = () => {
 
   const skills = [
     "Image & Video Editing",
-    "Digital Media & Web Graphics",
-    "Social Media Asset Creation",
+    "Digital Media",
+    "Social Visual Creation",
     "Visual Content Creation",
-    "UI Design & Simple Prototyping",
+    "Web Design/Graphics",
   ];
 
   return (
@@ -52,7 +54,7 @@ const AboutSection = () => {
               <div className="glass rounded-3xl p-3 relative">
                 <div className="aspect-[4/5] overflow-hidden rounded-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1376&auto=format&fit=crop"
+                    src={pic}
                     alt="Graphic Designer at work"
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
@@ -90,8 +92,7 @@ const AboutSection = () => {
               <p>
                 My approach combines strategic thinking with creative execution, ensuring every 
                 design not only looks beautiful but also serves its intended purpose effectively. 
-                From brand identities to digital experiences, I bring ideas to life with 
-                meticulous attention to detail.
+               
               </p>
             </div>
 

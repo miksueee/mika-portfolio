@@ -12,9 +12,14 @@ import pullup from "../../assets/branding/pullup.jpg";
 import poster from "../../assets/branding/poster.jpg";
 import poster1 from "../../assets/branding/poster1.jpg";
 import totebag from "../../assets/branding/totebag.png";
-import totebag1 from "../../assets/branding/totebag1.jpg";
 import notebook from "../../assets/branding/notebook.jpg";
-
+import brochure3 from "../../assets/branding/brochure.jpg";
+import brochure4 from "../../assets/branding/brochure4.jpg";
+import card from "../../assets/branding/cc.jpg";
+import env from "../../assets/branding/env.png";
+import shirt from "../../assets/branding/shirt.jpg";
+import shirt1 from "../../assets/branding/shirt1.jpg";
+import pen from "../../assets/branding/ballpen.jpg";
 
 
 type MediaType = "image" | "gif" | "video";
@@ -41,8 +46,8 @@ interface ProjectData {
 const projectData: ProjectData = {
   title: "Branding Guideline",
   category: "Branding & Visual Identity",
-  description: "Complete brand identity for solar energy solutions company, including branding assets, color palette, typography, and marketing collateral.",
-  tags: ["Branding", "Photoshop", "Photography", "Packaging"],
+  description: "The contents shows the brand identity through colors, typography, and visuals that define how the brand looks and feels. It highlights how these elements work together to create a clear and consistent brand presence.",
+  tags: ["Branding", "Mockups", "Typography", "Packaging"],
   backgroundImage: Background, 
   media: [
     {
@@ -87,15 +92,37 @@ const projectData: ProjectData = {
       orientation: "landscape",
       caption: "Trifold Brochure Mockup",
     },
+    {
+      id: 7,
+     type: "image",
+      url: brochure3,
+      orientation: "landscape",
+      caption: "Services Trifold Brochure",
+    },
+
+    {
+      id: 8,
+     type: "image",
+      url: brochure4,
+      orientation: "landscape",
+      caption: "Services Trifold Brochure",
+    },
+    {
+      id: 9,
+     type: "image",
+      url: card,
+      orientation: "square",
+      caption: "Business Card Design",
+    },
      {
-      id: 6,
+      id: 10,
      type: "image",
       url: pullup,
-      orientation: "landscape",
+      orientation: "wide",
       caption: "Pull-up Banner Design",
     },
       {
-    id: 7,
+    id: 11,
      type: "image",
       url: poster,
       orientation: "landscape",
@@ -103,7 +130,7 @@ const projectData: ProjectData = {
     },
 
         {
-    id: 8,
+    id: 12,
      type: "image",
       url: totebag,
       orientation: "landscape",
@@ -111,26 +138,49 @@ const projectData: ProjectData = {
     },
 
         {
-    id: 9,
+    id: 13,
      type: "image",
       url: poster1,
       orientation: "landscape",
-      caption: "Tote Bag Design",
+      caption: "Poster Design",
     },
 
          {
-    id: 10,
+    id: 14,
      type: "image",
-      url: totebag1,
+      url: shirt,
       orientation: "landscape",
-      caption: "Tote Bag Design",
+      caption: "Polo shirt Design",
     },
-             {
-    id: 11,
+      {
+    id: 15,
+     type: "image",
+      url: shirt1,
+      orientation: "landscape",
+      caption: "Polo shirt Design",
+    },
+    
+     {
+    id: 16,
      type: "image",
       url: notebook,
-      orientation: "landscape",
+      orientation: "square",
       caption: "Notebook Design",
+    },
+
+      {
+    id: 17,
+     type: "image",
+      url: pen,
+      orientation: "square",
+      caption: "Ballpen Design",
+    },
+     {
+    id: 18,
+     type: "image",
+      url: env,
+      orientation: "wide",
+      caption: "Envelope mock up design",
     },
   ],
 };
@@ -197,30 +247,32 @@ const BrandingProjectDetails = () => {
   };
 
   const renderMedia = (media: MediaItem, isLightbox: boolean = false) => {
-    const className = isLightbox
-      ? "w-full h-full object-contain"
-      : "w-full h-full object-cover transition-transform duration-500 group-hover:scale-105";
+  const className = isLightbox
+    ? "w-full h-full object-contain"
+    : "w-full h-full object-contain transition-transform duration-500 group-hover:scale-105";
 
-    if (media.type === "video") {
-      return (
-        <iframe
-          src={media.url}
-          className={className}
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          title={media.alt || media.caption}
-        />
-      );
-    }
-
+  if (media.type === "video") {
     return (
-      <img
+      <video
         src={media.url}
-        alt={media.alt || media.caption || projectData.title}
         className={className}
+        autoPlay
+        loop
+        muted
+        playsInline
+        controls={isLightbox}
       />
     );
-  };
+  }
+
+  return (
+    <img
+      src={media.url}
+      alt={media.alt || media.caption || projectData.title}
+      className={className}
+    />
+  );
+};
 
   return (
     <div className="min-h-screen bg-background relative">

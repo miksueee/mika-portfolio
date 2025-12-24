@@ -61,9 +61,9 @@ interface ProjectData {
 }
 
 const projectData: ProjectData = {
-  title: "Marketing Assets Design",
+  title: "Creative Social Graphics",
   category: "Marketing Assets",
-  description: "Marketing assets design project for a tech startup, featuring a modern, responsive website with interactive elements and a clean aesthetic.",
+  description: "Visual-focused social media designs and poster-style graphics. The works explore layout, color, and composition without being tied to a single theme or campaign.",
   tags: ["Marketing Assets", "UI/UX", "Responsive Design", "Frontend Development"],
   backgroundImage: Background, 
   media: [
@@ -383,30 +383,32 @@ const SocialMediaProjectDetails = () => {
   };
 
   const renderMedia = (media: MediaItem, isLightbox: boolean = false) => {
-    const className = isLightbox
-      ? "w-full h-full object-contain"
-      : "w-full h-full object-cover transition-transform duration-500 group-hover:scale-105";
+  const className = isLightbox
+    ? "w-full h-full object-cover"
+    : "w-full h-full object-cover transition-transform duration-500 group-hover:scale-105";
 
-    if (media.type === "video") {
-      return (
-        <iframe
-          src={media.url}
-          className={className}
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          title={media.alt || media.caption}
-        />
-      );
-    }
-
+  if (media.type === "video") {
     return (
-      <img
+      <video
         src={media.url}
-        alt={media.alt || media.caption || projectData.title}
         className={className}
+        autoPlay
+        loop
+        muted
+        playsInline
+        controls={isLightbox}
       />
     );
-  };
+  }
+
+  return (
+    <img
+      src={media.url}
+      alt={media.alt || media.caption || projectData.title}
+      className={className}
+    />
+  );
+};
 
   return (
     <div className="min-h-screen bg-background relative">

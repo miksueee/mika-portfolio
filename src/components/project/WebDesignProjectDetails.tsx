@@ -32,9 +32,9 @@ interface ProjectData {
 }
 
 const projectData: ProjectData = {
-  title: "Web Design for Tech Startup",
+  title: "Web Interface Designs",
   category: "Web Design",
-  description: "Web design project for a tech startup, featuring a modern, responsive website with interactive elements and a clean aesthetic.",
+  description: "Simple web and UI designs focused on clean layouts and usability. Each design explores basic structure, spacing, and visual hierarchy for digital interfaces.",
   tags: ["Web Design", "UI/UX", "Responsive Design", "Frontend Development"],
   backgroundImage: Background, 
   media: [
@@ -43,42 +43,42 @@ const projectData: ProjectData = {
       type: "image",
       url: web,
       orientation: "landscape",
-      caption: "Sample Mobile UI Design",
+      caption: "A minimal visual design created for a coffee shop brand.",
     },
     {
       id: 2,
       type: "image",
       url: web1,
       orientation: "landscape",
-      caption: "Sample Mobile UI Design",
+      caption: "A clean mobile interface designed for a service-based mobile application.",
     },
     {
       id: 3,
      type: "image",
       url: web2,
       orientation: "landscape",
-      caption: "Sample Mobile UI Design",
+      caption: "A modern visual identity designed for a solar energy company.",
     },
     {
       id: 4,
        type: "image",
       url: web3,
       orientation: "landscape",
-      caption: "Sample Mobile UI Design",
+      caption: "A modern visual identity designed for a solar energy company.",
     },
     {
       id: 5,
       type: "image",
       url: web4,
       orientation: "landscape",
-      caption: "Sample Mobile UI Design",
+      caption: "A friendly UI design created for an online learning platform.",
     },
     {
       id: 6,
      type: "image",
       url: web5,
       orientation: "landscape",
-      caption: "Sample Mobile UI Design",
+      caption: "A friendly UI design created for an online learning platform.",
     },
   ],
 };
